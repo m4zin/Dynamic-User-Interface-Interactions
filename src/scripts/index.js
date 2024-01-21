@@ -1,12 +1,13 @@
 import '../styles/styles.css'
-// import { dropDown } from './dropdown'
+import { dropdown } from './dropdown'
 
-(function() {
-    // For mobile menu
-    let mobDropDownItems = document.querySelector('.hamburger-menu-items');
-    let mobDropDownBtn = document.querySelector('.hamburger-menu-btn');
+(function () {
 
-    mobDropDownBtn.addEventListener('click', () => {
-        mobDropDownItems.style.display = (mobDropDownItems.style.display === 'none' || mobDropDownItems.style.display === '') ? 'flex' : 'none';
-    });
-})();
+    // dropping down on hover of navbar button services.
+    const servicesBtn = document.querySelector('.services-btn')
+    const servicesList = document.querySelector('.services-dropdown')
+
+    dropdown.displayDropdown(servicesBtn, servicesList, 'show-dropdown')
+})()
+
+
