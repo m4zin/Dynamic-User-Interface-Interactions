@@ -109,6 +109,47 @@ body {
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
+/* --- Mobile menu --- */
+.mobile-menu {
+    height: inherit;
+}
+
+.hamburger-btn-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    min-height: fit-content;
+    background-color: grey;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hamburger-btn {
+    margin: 20px;
+    border: none;
+    background: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.topbar {
+    background-color: lightgray;
+    min-width: fit-content;
+    display: flex;
+    height: fit-content;
+    padding: 20px 0px 20px 0px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    /* Before animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
 .show-dropdown {
     /* After animation */
     opacity: 1;
@@ -116,65 +157,7 @@ body {
     transform: translateY(0);
 }
 
-/* --- Mobile menu --- */
-.hamburger-btn-container {
-    position: absolute;
-    height: fit-content;
-    padding: 25px;
-    /* Upping element hierarchy. */
-    z-index: 5;
-}
-
-.hamburger-btn,
-.mob-btn-services {
-    border: none;
-    background: none;
-    padding: none;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-.center-logo-and-quote {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.center-logo-and-quote p:nth-child(1) {
-    color: blue;
-    font-size: 32px;
-}
-
-.mobile-menu {
-    display: none;
-    height: inherit;
-    gap: 50px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-menu a {
-    text-decoration: none;
+.topbar a {
     color: black;
-    font-size: 32px;
-}
-
-.mob-services-dropdown a {
-    font-size: 24px;
-}
-
-.mobile-services {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.mob-services-dropdown {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
 }
