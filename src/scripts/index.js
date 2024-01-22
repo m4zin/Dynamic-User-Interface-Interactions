@@ -1,5 +1,6 @@
-import '../styles/navbar.css'
+import '../styles/styles.css'
 import { dropdown } from './dropdown'
+import { mobile } from './mobile'
 
 function runDropDown() {
   // Navbar dropdown stuff.
@@ -19,7 +20,23 @@ function runDropDown() {
   dropdown.displayDropdown(servicesBtn, servicesList, 'show-dropdown')
 }
 
+function runMobMenu() {
+  const hamburgerBtn = document.querySelector('.hamburger-btn')
+  const home = document.querySelector('.center-logo-and-quote')
+  const menu = document.querySelector('.mobile-menu')
+  mobile.openMenu(hamburgerBtn, home, menu)  
+}
+
+function runMobServicesSec() {
+  const mobMenu = document.querySelector('.mob-services-dropdown')
+  const sectionBtn = document.querySelector('.mob-btn-services')
+  mobile.openSectionMenu(sectionBtn, mobMenu) 
+}
+
+
 (function() {
-  runDropDown()
+  // runDropDown()
+  runMobMenu()
+  runMobServicesSec()
 })()
 
