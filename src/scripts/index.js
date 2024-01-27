@@ -1,5 +1,6 @@
 import '../styles/styles.css'
 import { dropdown } from './dropdown'
+import { imageSlider } from './imageSlider'
 
 function runDropDown() {
   // Navbar dropdown stuff.
@@ -20,7 +21,9 @@ function runDropDown() {
   // dropdown.displayDropdown(itemThreeBtn, itemThreeList, 'show-dropdown')
   // dropdown.displayDropdown(itemFourBtn, itemFourList, 'show-dropdown')
   // dropdown.displayDropdown(servicesBtn, servicesList, 'show-dropdown')
-  dropdown.displayDropdown(mobBtn, mobTopBar, 'show-dropdown')
+  // dropdown.displayDropdown(mobBtn, mobTopBar, 'show-dropdown')
+
+  imageSlider.slideImage
 }
 
 (function() {
